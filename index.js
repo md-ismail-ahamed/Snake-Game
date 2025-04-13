@@ -39,6 +39,7 @@ function renderGame() {
      snakeBody.push([foodX,foodY]);
      generateFood();
      score+=10;
+     updateGameSpeed();
      scoreContainer.innerHTML = "Score:" + score;
     }
     snakeBody.pop();
@@ -60,10 +61,20 @@ function renderGame() {
 }
 
 generateFood();
-setInterval(renderGame,150);
-if(score > 120){
-    clearInterval(renderGame);
-    setInterval(renderGame,90);
+let gameSpeed = 150;
+let gameInterval = setInterval(renderGame, gameSpeed);
+
+function updateGameSpeed() {
+    if (score === 100) {
+        clearInterval(gameInterval);
+        gameSpeed = 100;
+        gameInterval = setInterval(renderGame, gameSpeed);
+    }
+    else if (score === 230) {
+        clearInterval(gameInterval);
+        gameSpeed = 80;
+        gameInterval = setInterval(renderGame, gameSpeed);
+    }
 }
 document.addEventListener("keydown",function(e){
     console.log(e.key);
