@@ -3,7 +3,7 @@
 This is a classic Snake Game built using HTML, CSS, and vanilla JavaScript, where the player controls a snake on a 25×25 grid to consume food and grow longer.
 The game logic handles real-time movement, collision detection, and dynamic UI updates with efficient use of JavaScript and DOM manipulation.
 
-## LINK ## -> https://ismail-ahamed.github.io/Snake-Game/ 
+## LINK ## -> 
 
 ⚙️ Features
 
